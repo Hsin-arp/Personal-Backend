@@ -33,3 +33,6 @@ export default async function handler(req, res) {
     res.status(500).json({ message: "Failed to send email" });
   }
 }
+console.log("Mongo:", !!process.env.MONGODB_URI);
+console.log("Email:", !!process.env.EMAIL_USER);
+
